@@ -38,7 +38,7 @@ namespace Integration
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = client.PostAsync("posts", content).Result;
             if (response.IsSuccessStatusCode) {
-              var responseContent = response.Content.ReadAsStringAsync().Result;\
+              var responseContent = response.Content.ReadAsStringAsync().Result;
               var options = new JsonSerializerOptions {
                 PropertyNameCaseInsensitive = true
               };
